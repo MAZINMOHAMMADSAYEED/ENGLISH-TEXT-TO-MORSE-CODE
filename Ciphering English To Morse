@@ -8,7 +8,7 @@ def morse_code_to_text(decipher):
     CODE= { '/ ':' ', '.- ':'A', '-... ':'B', '-.-. ':'C', '-.. ':'D', '. ':'E', '..-. ':'F', '--. ':'G', '.... ':'H', '.. ':'I', '.--- ':'J', '-.- ':'K', '.-.. ':'L', '-- ':'M', '-. ':'N' , '--- ':'O', '.--. ':'P', '--.- ':'Q', '.-. ':'R', '... ':'S', '- ':'T', '..- ':'U', '...- ':'V', '.-- ':'W', '-..- ':'X', '-.-- ':'Y', '--.. ':'Z', '.---- ':'1', '..--- ':'2', '...-- ':'3', '....- ':'4', '..... ':'5', '-.... ':'6', '--... ':'7', '---.. ':'8', '----. ':'9', '----- ':'0', '--..-- ':', ', '.-.-.- ':'.', '..--.. ':'?', '-..-. ':'/', '-....- ':'-', '-.--. ':'(', '-.--.- ':')'}
     message=' '
     for j in decipher:
-       #message+= CODE[j.translate()]
+# WHAT TO DO IN THIS LINE----->message+= CODE[j.translate()]
     return (message)
 print("Enter 1 to cipher the message and 2 to decipher it")
 option=int(input('Enter the correct option: '))
