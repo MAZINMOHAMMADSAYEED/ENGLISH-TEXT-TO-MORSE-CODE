@@ -21,4 +21,4 @@ elif (option==2):
     print(text_to_morse_code(decipher,option))
 else:
     print('ENTERED OPTION IS INCORRECT!!!')
-QUIT=input('ENTER ANY KEY TO CLOSE THE APPLICATION: ')
+QUIT=input('PRESS ENTER TO CLOSE THE APPLICATION')
