@@ -1,0 +1,24 @@
+def text_to_morse_code(text,a):
+    CODE= { ' ':'/ ', 'A':'.- ', 'B':'-... ', 'C':'-.-. ', 'D':'-.. ', 'E':'. ', 'F':'..-. ', 'G':'--. ', 'H':'.... ', 'I':'.. ', 'J':'.--- ', 'K':'-.- ', 'L':'.-.. ', 'M':'-- ', 'N':'-. ', 'O':'--- ', 'P':'.--. ', 'Q':'--.- ', 'R':'.-. ', 'S':'... ', 'T':'- ', 'U':'..- ', 'V':'...- ', 'W':'.-- ', 'X':'-..- ', 'Y':'-.-- ', 'Z':'--.. ', '1':'.---- ', '2':'..--- ', '3':'...-- ', '4':'....- ', '5':'..... ', '6':'-.... ', '7':'--... ', '8':'---.. ', '9':'----. ', '0':'----- ', ', ':'--..-- ', '.':'.-.-.- ', '?':'..--.. ', '/':'-..-. ', '-':'-....- ', '(':'-.--. ', ')':'-.--.- '}
+    morse_code=' '
+    if(a==1):
+        for i in text:
+            morse_code+= CODE[i.upper()]
+    else:
+        for i in text.split():
+            for key,value in CODE.items():
+                if(i+' '==value):
+                    morse_code+=key
+                    break
+    return (morse_code)
+print("Enter 1 to cipher the message and 2 to decipher it")
+option=int(input('Enter the correct option: '))
+if (option==1):
+    text=input('Enter the text to cipher: ')
+    print(text_to_morse_code(text,option))
+elif (option==2):
+    decipher=input('Enter the code to decipher: ')
+    print(text_to_morse_code(decipher,option))
+else:
+    print('ENTERED OPTION IS INCORRECT!!!')
+QUIT=input('ENTER ANY KEY TO CLOSE THE APPLICATION: ')
